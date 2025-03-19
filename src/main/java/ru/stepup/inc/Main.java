@@ -32,8 +32,11 @@ public class Main {
             s.setTopLeftPoint(-1,-1);
             System.out.println(s);
         } catch (Exception e) {
-            throw new RuntimeException(e);
+            System.out.println("Ошибка: " + e.getMessage());
         }
+
+        s.setTopLeftPoint(1,1);
+        System.out.println(s);
 
     }
 }
