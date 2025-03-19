@@ -5,8 +5,12 @@ public class Square {
     private int sideLenght;
 
     public Square(int x, int y, int sideLenght) {
-        this.topLeftPoint = new Point(x, y);
-        this.sideLenght = sideLenght;
+        if (x >= 0 && y >= 0 && sideLenght > 0) {
+            this.topLeftPoint = new Point(x, y);
+            this.sideLenght = sideLenght;
+        } else {
+            throw new IllegalArgumentException("Значение должно быть больше нуля");
+        }
     }
 
     public Point getTopLeftPoint() {
@@ -14,7 +18,11 @@ public class Square {
     }
 
     public void setTopLeftPoint(int x, int y) {
-        this.topLeftPoint = new Point(x, y);
+        if (x >= 0 && y >= 0) {
+            this.topLeftPoint = new Point(x, y);
+        } else {
+            throw new IllegalArgumentException("Значение должно быть больше нуля");
+        }
     }
 
     public int getSideLenght() {
@@ -22,7 +30,11 @@ public class Square {
     }
 
     public void setSideLenght(int sideLenght) {
-        this.sideLenght = sideLenght;
+        if (sideLenght > 0) {
+            this.sideLenght = sideLenght;
+        } else {
+            throw new IllegalArgumentException("Значение должно быть больше нуля");
+        }
     }
 
     @Override

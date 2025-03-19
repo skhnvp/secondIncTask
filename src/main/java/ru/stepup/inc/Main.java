@@ -27,5 +27,8 @@ public class Main {
 
         s.setTopLeftPoint(4,5);
         System.out.println(s);
+
+        s.setTopLeftPoint(-1,-1);
+        System.out.println(s);
     }
 }
