@@ -5,7 +5,7 @@ public class Square {
     private int sideLenght;
 
     public Square(int x, int y, int sideLenght) {
-        if (x >= 0 && y >= 0 && sideLenght > 0) {
+        if (sideLenght > 0) {
             this.topLeftPoint = new Point(x, y);
             this.sideLenght = sideLenght;
         } else {
@@ -17,12 +17,8 @@ public class Square {
         return new Point(topLeftPoint.getX(), topLeftPoint.getY());
     }
 
-    public void setTopLeftPoint(int x, int y) {
-        if (x >= 0 && y >= 0) {
-            this.topLeftPoint = new Point(x, y);
-        } else {
-            throw new IllegalArgumentException("Значение должно быть больше нуля");
-        }
+    public void setTopLeftPoint(Point p) {
+        this.topLeftPoint = new Point(p.getX(), p.getY());
     }
 
     public int getSideLenght() {

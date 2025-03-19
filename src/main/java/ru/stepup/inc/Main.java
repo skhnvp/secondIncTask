@@ -25,17 +25,17 @@ public class Main {
         s.setSideLenght(3);
         System.out.println(s);
 
-        s.setTopLeftPoint(4,5);
+        s.setTopLeftPoint(new Point(4,5));
         System.out.println(s);
 
         try {
-            s.setTopLeftPoint(-1,-1);
+            s.setSideLenght(-1);
             System.out.println(s);
         } catch (Exception e) {
             System.out.println("Ошибка: " + e.getMessage());
         }
 
-        s.setTopLeftPoint(1,1);
+        s.setTopLeftPoint(new Point(1,1));
         System.out.println(s);
 
     }
