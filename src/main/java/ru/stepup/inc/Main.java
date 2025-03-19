@@ -28,7 +28,12 @@ public class Main {
         s.setTopLeftPoint(4,5);
         System.out.println(s);
 
-        s.setTopLeftPoint(-1,-1);
-        System.out.println(s);
+        try {
+            s.setTopLeftPoint(-1,-1);
+            System.out.println(s);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }
